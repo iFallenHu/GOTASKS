@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTASKS</title>
+
+    <!--CSS-->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/index.css">
+    <!--FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap" rel="stylesheet">
+    <!--ICONS-->
+    <script src="https://kit.fontawesome.com/ff982ea4cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <header class="header">
+    <h1 href="#">GoTasks</h1>
+   </header>
+   
+   <main class="container">
+    <header class="main-header">
+        <button class="btn-new-task">New Tasks</button>
+        <span class="total-tasks">
+            <span id="count-tasks">0</span> registered tasks
+        </span>
+    </header>
+<table>
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="table">
+            <tr>
+              <td>estudar HTML</td>
+              <td>31/03/2023</td>
+                <td>
+                    <a href="#">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+          </tr>
+
+    </tbody>
+</table>
+     <h3 id="loading-message">Loading...</h3>        
+    <div class="modal-background" id="modal">
+        <article class="modal-container">
+            <h2 class="title">Create new task</h2>
+
+            <form id="form">
+                <div class="form-group">
+                    <label for="description">Task description</label>
+                    <input 
+                    type="text"
+                    placeholder="Descrição"
+                    id="description"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input 
+                    type="date"
+                    id="date"
+                    >
+                </div>
+
+                <div class="buttons-modal">
+                    <button 
+                    class="btn-cancel" 
+                    type="button"
+                    onclick=""
+                    >
+                        Cancel
+                    </button>
+                    
+                    <button 
+                    class="btn-save" 
+                    type="submit"
+                    
+                    >
+                        Save
+                    </button>
+                </div>
+            </form>
+        </article>
+    </div>
+   </main>
+
+   <footer>
+    <p>GoTasks, 2023.</p>
+   </footer>
+</body>
+</html>
