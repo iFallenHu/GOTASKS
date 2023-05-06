@@ -19,14 +19,14 @@
     <!--ICONS-->
     <script src="https://kit.fontawesome.com/ff982ea4cc.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload ="fillTable()">
    <header class="header">
     <h1 href="#">GoTasks</h1>
    </header>
    
    <main class="container">
     <header class="main-header">
-        <button class="btn-new-task">New Tasks</button>
+        <button class="btn-new-task" onclick="toggleModal()">New Tasks</button>
         <span class="total-tasks">
             <span id="count-tasks">0</span> registered tasks
         </span>
@@ -73,7 +73,7 @@
                 <button 
                 class="btn-cancel" 
                 type="button"
-                onclick=""
+                onclick="toggleModal()"
                 >
                     Cancel
                 </button>
@@ -81,6 +81,7 @@
                 <button 
                 class="btn-save" 
                 type="submit"
+                id="btn-create-task"
                 
                 >
                     Save
@@ -93,5 +94,9 @@
    <footer>
     <p>GoTasks, 2023.</p>
    </footer>
+
+   <script src="./js/storage.js"></script>
+   <script src="./js/index.js"></script>
+   <script src="./js/modal.js"></script>
 </body>
 </html>
