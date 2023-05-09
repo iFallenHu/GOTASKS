@@ -42,7 +42,7 @@ function innerHTMLTasks(task){
 }
 
 function removeTask(id) {
-    const allTasks = getTasks();
+    const allTasks = getTasks('@Gotasks');
    const tasksFiltered = allTasks.filter(task => task.id !== id);
 
     setTasks(tasksFiltered);
